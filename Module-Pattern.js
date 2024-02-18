@@ -1,3 +1,11 @@
+/*
+The Module Pattern in JavaScript is a design pattern used for creating encapsulated and reusable code by organizing functionalities into self-contained modules. 
+It helps in achieving better code organization, preventing namespace pollution, and promoting code reusability.
+
+The Module Pattern utilizes closures to create private and public members within a module. 
+It involves defining a function that returns an object containing the functions and variables that you want to expose, while keeping others private within the module's scope
+*/
+
 // eCommerce module
 const eCommerceModule = (() => {
   // Private variables
