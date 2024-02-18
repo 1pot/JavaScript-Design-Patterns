@@ -1,33 +1,31 @@
 // eCommerce module
-var eCommerceModule = (function() {
+const eCommerceModule = (() => {
   // Private variables
-  var products = [];
+  const products = [];
 
   // Private function to calculate total price of products
-  function calculateTotalPrice() {
-    var totalPrice = 0;
-    products.forEach(function(product) {
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    products.forEach((product) => {
       totalPrice += product.price;
     });
     return totalPrice;
-  }
+  };
 
   // Public interface
   return {
     // Public function to add a product
-    addProduct: function(product) {
+    addProduct: (product) => {
       products.push(product);
     },
     // Public function to remove a product
-    removeProduct: function(productName) {
-      products = products.filter(function(product) {
-        return product.name !== productName;
-      });
+    removeProduct: (productName) => {
+      const filteredProducts = products.filter((product) => product.name !== productName);
+      products.length = 0;
+      filteredProducts.forEach((product) => products.push(product));
     },
     // Public function to get total price of products
-    getTotalPrice: function() {
-      return calculateTotalPrice();
-    }
+    getTotalPrice: () => calculateTotalPrice(),
   };
 })();
 
