@@ -2,6 +2,8 @@
 The Proxy Pattern in JavaScript is a structural design pattern that provides a surrogate or placeholder object, 
 which controls access to another object, known as the target object. This pattern allows you to add an extra layer of control over access to the target object, 
 enabling you to intercept and customize operations such as property access, property assignment, function invocation, and more.
+
+Proxies make it easy to add functionality such as validation, logging, formatting, notifications, and debugging.
 */
 
 //Proxy Pattern Explanation:
